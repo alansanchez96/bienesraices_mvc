@@ -1,0 +1,57 @@
+.alerta{
+    color: $blanco;
+    text-align: center;
+    text-transform: uppercase;
+    padding: .5rem;
+    margin: 1rem 0;
+    font-weight: bold;
+    
+    &.error{
+        background-color: $rojo;
+    }
+    &.correcto{
+        background-color: $verde;
+    }
+    &.actualizado{
+        background-color: $amarillo;
+    }
+}
+
+.div{
+    overflow-x: auto;
+}
+table{
+
+    margin: 2rem auto 7rem auto;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    thead{
+        background-color: $verde;
+        th{
+            text-transform: uppercase;
+            color: $blanco;
+            padding: 2rem;
+        }
+    }
+    tbody{
+        margin-top: 2rem;
+        .casa-img{
+            margin: auto;
+            width: 10rem;
+        }
+        td{
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px $gris solid;
+        }
+    }
+}
+.imagen-small{
+    width: 20rem;
+    margin-bottom: 2rem;
+}
+.w-100{
+    width: 100%;
+}

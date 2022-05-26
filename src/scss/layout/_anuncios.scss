@@ -1,0 +1,49 @@
+@include tablet {
+    .contenedor-anuncios {
+        @include grid(3, 2rem);
+    }
+}
+.anuncios{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: $gris;
+    border: 1px solid darken($gris, 5);
+    margin-top: 4rem;
+    .contenido-anuncios{
+        padding: 2rem;
+        padding-top: 0;
+        h3{
+            margin-top: 2rem;
+        }
+    }
+    h3, p{
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+}
+.precio{
+    color: $verde;
+    font-size: 3rem;
+    font-weight: $bold;
+}
+.iconos-caracteristicas{
+    list-style: none;
+    margin-right: 0;
+    display: flex;
+    max-width: 40rem;
+    li{
+        flex: 1;
+        display: flex;
+
+        img {
+            flex:  0 0 3rem;
+            margin-right: 1rem;
+        }
+        p {
+            font-weight: $black;
+        }
+    }
+}

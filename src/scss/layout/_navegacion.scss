@@ -1,0 +1,130 @@
+@use '../base/mixins';
+@use '../base/variables';
+
+.derecha{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 2rem;
+    align-items: center;
+    .nav-darkmode{
+        filter: invert(80%);
+        width: 3rem;
+        margin-top: 2rem;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+    @include telefono{
+        flex-direction: column;
+        align-items: flex-end;
+        .nav-darkmode{
+            margin-bottom: 1rem;
+        }
+    }
+    @include tablet{
+        margin: 0;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+
+.barra {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    @include telefono{
+        align-items: flex-end;
+    }
+    img{
+        width: 30rem;
+        height: auto;
+    }
+    @include tablet{
+        margin-top: 5rem;
+        padding: 0rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+
+.navegacion-header{
+
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .3s ease-in-out, opacity .2s linear, height .5s linear;
+    height: 0;
+    @include tablet{
+        display: flex;
+        /* padding: 5rem; */
+        gap: 2rem;
+        align-items: center;
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+        white-space: nowrap;
+    }
+    a{
+        color: $blanco;
+        font-size: 1.8rem;
+        display: block;
+        text-align: center;
+        @include telefono{
+            text-align: right;
+        }
+        &:hover{
+            color: $verde;
+        }
+    }
+}
+
+.mobile-menu{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    .logo-img{
+        max-width: 40rem;
+    }
+    .mobileMenu-hidden{
+        img{
+            padding-top: 2rem;
+            max-width: 2.6rem;
+        }       
+    }
+
+    @include telefono{
+        flex-direction: row;
+        justify-content: space-between;
+        .mobileMenu-hidden{
+            img{
+                padding-top: 0;
+            }
+        }
+    }
+    @include tablet{
+        .mobileMenu-hidden{
+            display: none;
+            
+        }
+    }
+}
+.mostrar{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    @include tablet{
+        flex-direction: row;
+    }
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+
